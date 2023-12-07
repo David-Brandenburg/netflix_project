@@ -15,13 +15,26 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((jsonData) => {
           console.log(jsonData);
           // Handle the data as needed
-          const ArrayTiltes = jsonData.Search;
-          console.log(jsonData.search);
-          for (let i = 0; i < ArrayTiltes.length; i++) {
-            const searchTitle = ArrayTiltes[i];
+          const ArrayTitles = jsonData.Search;
+          console.log(jsonData.Search);
+
+          const imgKachel = document.getElementsByClassName("card-img-top");
+          const titleKachel = document.getElementsByClassName("card-title");
+
+          for (let i = 0; i < ArrayTitles.length; i++) {
+            const searchTitle = ArrayTitles[i];
             console.log(searchTitle);
-            const imgKachel = document.getElementById("first_img");
-            imgKachel.src = searchTitle.Poster;
+
+            // Hier wird sichergestellt, dass das entsprechende Bild ausgewählt wird
+            const imgCard = imgKachel[i];
+            console.log(imgCard);
+
+            imgCard.src = searchTitle.Poster;
+
+            const titleCard = titleKachel[i];
+            console.log(titleCard);
+
+            titleCard.innerText = searchTitle.Title;
           }
         })
         .catch((error) => {
