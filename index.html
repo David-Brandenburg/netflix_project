@@ -4,67 +4,146 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd"
+      crossorigin="anonymous" />
+
     <title>Document</title>
   </head>
   <body class="bg-dark m-5 mt-0">
     <header class="d-flex flex-row m-5 mt-0 mb-0">
-        <h2 class="text-white mx-5">Crime Video</h2>
-        <form class="w-25 d-flex flex-row" id="searchForm">
-            <div class="mb-3">
-              <label for="search" class="form-label"></label>
-              <input
-                type="text"
-                class="form-control"
-                name=""
-                id="search"
-                aria-describedby="helpId"
-                placeholder="Search for Movies"
-              />
-            </div>
-            <button id="searchButton" type="button" class="btn btn-primary h-50 mt-4 bg-warning" onclick="submitForm()"><i class="bi bi-search text-dark"></i></button>
-          </form>
-        
+      <h2 class="text-white mx-5 mt-4">Crime Video</h2>
+      <form class="w-25 d-flex flex-row" id="searchForm">
+        <div class="mb-3">
+          <label for="search" class="form-label"></label>
+          <input
+            type="text"
+            class="form-control"
+            name=""
+            id="search"
+            aria-describedby="helpId"
+            placeholder="Search for Movies" />
+        </div>
+        <button
+          id="searchButton"
+          type="button"
+          class="btn btn-primary h-50 mt-4 bg-warning"
+          onclick="submitForm()">
+          <i class="bi bi-search text-dark"></i>
+        </button>
+      </form>
 
-        <a href="" class="mx-5">Startseite</a>
-        <a href="">Kategorien</a>
-        <a href="" class="mx-5">mein Bereich</a>
-      </div>
+      <a
+        href=""
+        class="mx-5 mt-4 text-decoration-none"
+        style="color: lightgray; font-size: 20px; font-weight: 600"
+        >Startseite</a
+      >
+      <a
+        href=""
+        class="mx-5 mt-4 text-decoration-none"
+        style="color: lightgray; font-size: 20px; font-weight: 600"
+        >Kategorien</a
+      >
+      <a
+        href=""
+        class="mx-5 mt-4 text-decoration-none"
+        style="color: lightgray; font-size: 20px; font-weight: 600"
+        >Mein Bereich</a
+      >
+
       <div>
         <!-- karussel -->
       </div>
     </header>
     <main>
       <div class="row justify-content-center align-items-center g-2">
-        <div class="col">
-          <div id="first" class="card">
-            <img id="first_img" class="card-img-top" src="holder.js/100x180/" alt="Title" />
-            <div class="card-body">
-              <h4 class="card-title">Title</h4>
-              <p class="card-text">Text</p>
-            </div>
+        <div class="col mb-2">
+          <div id="first">
+            <img
+              id="first_img"
+              class="card-img-top"
+              style="
+                max-height: 200px;
+                object-fit: cover;
+                z-index: 1;
+                border-radius: 15px;
+              "
+              src="holder.js/100x180/"
+              alt="Title" />
+            <h2
+              class="title_poster"
+              style="
+                z-index: 5;
+                position: absolute;
+                color: white;
+                top: 15%;
+                left: 5%;
+                font-size: 36px;
+                background-color: rgba(0, 0, 0, 0.671);
+                border-radius: 15px;
+              "></h2>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-            <div class="card-body">
-              <h4 class="card-title">Title</h4>
-              <p class="card-text">Text</p>
-            </div>
+        <div class="col mb-2">
+          <div class="card" style="border: none; border-radius: 16px">
+            <img
+              class="card-img-top"
+              style="
+                max-height: 200px;
+                object-fit: cover;
+                z-index: 1;
+                border-radius: 15px;
+              "
+              src="holder.js/100x180/"
+              alt="Title" />
+            <h2
+              class="title_poster"
+              style="
+                z-index: 5;
+                position: absolute;
+                color: white;
+                top: 15%;
+                left: 5%;
+                font-size: 36px;
+                background-color: rgba(0, 0, 0, 0.671);
+                border-radius: 15px;
+              "></h2>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-            <div class="card-body">
+        <div class="col mb-2">
+          <div class="card" style="border: none; border-radius: 16px">
+            <img
+              class="card-img-top"
+              style="
+                max-height: 200px;
+                object-fit: cover;
+                z-index: 1;
+                border-radius: 15px;
+              "
+              src="holder.js/100x180/"
+              alt="Title" />
+            <h2
+              class="title_poster"
+              style="
+                z-index: 5;
+                position: absolute;
+                color: white;
+                top: 15%;
+                left: 5%;
+                font-size: 36px;
+                background-color: rgba(0, 0, 0, 0.671);
+                border-radius: 15px;
+              "></h2>
+            <div class="card-body" style="display: none">
               <h4 class="card-title">Title</h4>
               <p class="card-text">Text</p>
             </div>
@@ -72,28 +151,76 @@
         </div>
       </div>
       <div class="row justify-content-center align-items-center g-2">
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
-            <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-            <div class="card-body">
+            <img
+              class="card-img-top"
+              style="max-height: 200px; object-fit: cover; z-index: 1"
+              src="holder.js/100x180/"
+              alt="Title" />
+            <h2
+              class="title_poster"
+              style="
+                z-index: 5;
+                position: absolute;
+                color: white;
+                top: 15%;
+                left: 5%;
+                font-size: 36px;
+                background-color: rgba(0, 0, 0, 0.671);
+                border-radius: 15px;
+              "></h2>
+            <div class="card-body" style="display: none">
               <h4 class="card-title">Title</h4>
               <p class="card-text">Text</p>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
-            <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-            <div class="card-body">
+            <img
+              class="card-img-top"
+              style="max-height: 200px; object-fit: cover; z-index: 1"
+              src="holder.js/100x180/"
+              alt="Title" />
+            <h2
+              class="title_poster"
+              style="
+                z-index: 5;
+                position: absolute;
+                color: white;
+                top: 15%;
+                left: 5%;
+                font-size: 36px;
+                background-color: rgba(0, 0, 0, 0.671);
+                border-radius: 15px;
+              "></h2>
+            <div class="card-body" style="display: none">
               <h4 class="card-title">Title</h4>
               <p class="card-text">Text</p>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col mb-2">
           <div class="card">
-            <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-            <div class="card-body">
+            <img
+              class="card-img-top"
+              style="max-height: 200px; object-fit: cover; z-index: 1"
+              src="holder.js/100x180/"
+              alt="Title" />
+            <h2
+              class="title_poster"
+              style="
+                z-index: 5;
+                position: absolute;
+                color: white;
+                top: 15%;
+                left: 5%;
+                font-size: 36px;
+                background-color: rgba(0, 0, 0, 0.671);
+                border-radius: 15px;
+              "></h2>
+            <div class="card-body" style="display: none">
               <h4 class="card-title">Title</h4>
               <p class="card-text">Text</p>
             </div>
@@ -139,7 +266,7 @@
         <div>listen mit links</div>
       </div>
     </footer>
-<script type="module" src="./scripts/fetch.js"></script>
+    <script type="module" src="./scripts/fetch.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

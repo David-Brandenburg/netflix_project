@@ -16,14 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log(jsonData);
           // Handle the data as needed
           const ArrayTitles = jsonData.Search;
-          console.log(jsonData.Search);
+          console.log(ArrayTitles);
 
           const imgKachel = document.getElementsByClassName("card-img-top");
-          const titleKachel = document.getElementsByClassName("card-title");
+          const titlePoster = document.getElementsByClassName("title_poster");
 
           for (let i = 0; i < ArrayTitles.length; i++) {
             const searchTitle = ArrayTitles[i];
             console.log(searchTitle);
+            localStorage.setItem("search", JSON.stringify(searchTitle));
 
             // Hier wird sichergestellt, dass das entsprechende Bild ausgewählt wird
             const imgCard = imgKachel[i];
@@ -31,10 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             imgCard.src = searchTitle.Poster;
 
-            const titleCard = titleKachel[i];
-            console.log(titleCard);
+            const title = titlePoster[i];
 
-            titleCard.innerText = searchTitle.Title;
+            title.innerText = searchTitle.Title;
+            console.log(title);
           }
         })
         .catch((error) => {
