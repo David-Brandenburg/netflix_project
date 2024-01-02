@@ -34,4 +34,23 @@
 
 body .bi-search {
   font-size: 16px;
+}
+body .Info {
+  display: none;
+  margin-left: 10px;
+  font-weight: bold;
+}
+body .info_year {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+body .row .col:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  z-index: 10;
+}
+body .row .col:hover .Info {
+  display: block;
+  z-index: 10;
 }/*# sourceMappingURL=style.css.map */

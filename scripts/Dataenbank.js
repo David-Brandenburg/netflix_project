@@ -1,3 +1,14 @@
+const firstImg = document.getElementById("first_img_carousel");
+const secondImg = document.getElementById("sec_img_carousel");
+const thirdImg = document.getElementById("third_img_carousel");
+const fourImg = document.getElementById("four_img_carousel");
+const fiveImg = document.getElementById("five_img_carousel");
+const sixImg = document.getElementById("six_img_carousel");
+const sevenImg = document.getElementById("seven_img_carousel");
+const eightImg = document.getElementById("eight_img_carousel");
+const nineImg = document.getElementById("nine_img_carousel");
+const tenImg = document.getElementById("ten_img_carousel");
+
 const TopTen = [
   {
     Title: "Silver and the Book of Dreams",
@@ -80,3 +91,31 @@ const TopTen = [
     imdbID: "tt0417741",
   },
 ];
+
+for (let i = 0; i < TopTen.length; i++) {
+  const movie = TopTen[i];
+  console.log(movie);
+
+  // Assign the source to the corresponding image element based on the loop index
+  if (i === 0) {
+    firstImg.src = movie.Poster;
+  } else if (i === 1) {
+    secondImg.src = movie.Poster;
+  } else if (i === 2) {
+    thirdImg.src = movie.Poster;
+  } else if (i === 3) {
+    fourImg.src = movie.Poster;
+  } else if (i === 4) {
+    fiveImg.src = movie.Poster;
+  } else if (i === 5) {
+    sixImg.src = movie.Poster;
+  } else if (i === 6) {
+    sevenImg.src = movie.Poster;
+  } else if (i === 7) {
+    eightImg.src = movie.Poster;
+  } else if (i === 8) {
+    nineImg.src = movie.Poster;
+  } else if (i === 9) {
+    tenImg.src = movie.Poster;
+  }
+}

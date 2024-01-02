@@ -36,4 +36,27 @@ body {
   .bi-search {
     font-size: 16px;
   }
+  .Info {
+    display: none;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  .info_year {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .row {
+    .col {
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s;
+        z-index: 10;
+        .Info {
+          display: block;
+          z-index: 10;
+        }
+      }
+    }
+  }
 }

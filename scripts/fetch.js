@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (searchTerm.trim() !== "") {
       const url = `http://www.omdbapi.com/?apikey=${apikey}&s=${searchTerm}`;
-
+      const infoData = [];
       fetch(url)
         .then((data) => {
           return data.json();
@@ -17,25 +17,76 @@ document.addEventListener("DOMContentLoaded", function () {
           // Handle the data as needed
           const ArrayTitles = jsonData.Search;
           console.log(ArrayTitles);
-
-          const imgKachel = document.getElementsByClassName("card-img-top");
-          const titlePoster = document.getElementsByClassName("title_poster");
-
           for (let i = 0; i < ArrayTitles.length; i++) {
-            const searchTitle = ArrayTitles[i];
-            console.log(searchTitle);
-            localStorage.setItem("search", JSON.stringify(searchTitle));
+            const Title = ArrayTitles[i].imdbID;
+            console.log(Title);
 
-            // Hier wird sichergestellt, dass das entsprechende Bild ausgewählt wird
-            const imgCard = imgKachel[i];
-            console.log(imgCard);
+            const url2 = `http://www.omdbapi.com/?apikey=${apikey}&i=${Title}`;
 
-            imgCard.src = searchTitle.Poster;
+            fetch(url2)
+              .then((data2) => {
+                return data2.json();
+              })
+              .then((jsonData2) => {
+                console.log(jsonData2);
+                infoData.push(jsonData2);
+                console.log(infoData);
 
-            const title = titlePoster[i];
+                const imgKachel =
+                  document.getElementsByClassName("card-img-top");
+                const titlePoster =
+                  document.getElementsByClassName("title_poster");
 
-            title.innerText = searchTitle.Title;
-            console.log(title);
+                const description = document.getElementsByClassName("descrip");
+                const Titledescription =
+                  document.getElementsByClassName("title_info");
+                const stars = document.getElementsByClassName("stars");
+                const year = document.getElementsByClassName("release");
+                const run = document.getElementsByClassName("run_time");
+                const PG = document.getElementsByClassName("Rated");
+
+                for (let j = 0; j < infoData.length; j++) {
+                  const Movie = infoData[j];
+                  console.log(Movie);
+
+                  localStorage.setItem("search", JSON.stringify(Movie));
+
+                  const imgCard = imgKachel[j];
+                  console.log(imgCard);
+
+                  imgCard.src = Movie.Poster;
+
+                  const title = titlePoster[j];
+
+                  title.innerText = Movie.Title;
+                  console.log(title);
+
+                  const Tdesc = Titledescription[j];
+                  Tdesc.innerText = Movie.Title;
+                  Tdesc.style.color = "white";
+
+                  const starsCount = stars[j];
+                  starsCount.innerText = `${Movie.imdbRating} Stars`;
+                  starsCount.style.color = "white";
+
+                  const release = year[j];
+                  release.innerText = Movie.Year;
+                  release.style.color = "#aaaaaa";
+
+                  const runTime = run[j];
+                  runTime.innerText = Movie.Runtime;
+                  runTime.style.color = "#aaaaaa";
+
+                  const USK = PG[j];
+                  USK.innerText = Movie.Rated;
+                  USK.style.color = "#aaaaaa";
+
+                  const des = description[j];
+                  des.innerText = Movie.Plot;
+                  des.style.color = "#aaaaaa";
+                  console.log(des);
+                }
+              });
           }
         })
         .catch((error) => {
