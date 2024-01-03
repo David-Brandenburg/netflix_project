@@ -84,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
                   const des = description[j];
                   des.innerText = Movie.Plot;
                   des.style.color = "#aaaaaa";
-                  console.log(des);
                 }
               });
           }

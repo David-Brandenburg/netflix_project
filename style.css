@@ -38,6 +38,7 @@ body .bi-search {
 body .Info {
   display: none;
   margin-left: 10px;
+  margin-right: 10px;
   font-weight: bold;
 }
 body .info_year {
@@ -53,4 +54,37 @@ body .row .col:hover {
 body .row .col:hover .Info {
   display: block;
   z-index: 10;
+}
+body .row .col:hover .Info .Play {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body .row .col:hover .Info .Play .bi {
+  font-size: 64px;
+  color: white;
+}
+body .row .col:hover .Info .Play p {
+  color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+body .row .col:hover .Info .Play .bbi {
+  font-size: 48px;
+  margin-left: 150px;
+}
+body .row .col:hover .Info .Play .circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  background-color: #212529;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+}
+body .row .col:hover .Info .Play .circle .bbbi {
+  font-size: 36px;
+  color: #000000;
 }/*# sourceMappingURL=style.css.map */
